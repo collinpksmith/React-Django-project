@@ -128,12 +128,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000'
-]
+] 
 
 REST_FRAMEWORK = {
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
-            'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+            # 'rest_framework_simplejwt.authentication.JWTAuthentication',
+            'rest_framework.authentication.TokenAuthentication'
     ],
 
     'DEFAULT_PERMISSION_CLASSES': [
